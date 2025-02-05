@@ -28,7 +28,7 @@ const ShipmentsTable = memo(() => {
                     filteredShipments.map((shipment) => (
                         <tr key={shipment.id} className="border-b hover:bg-gray-100 transition-all opacity-0 animate-fadeIn">
                             <td className="px-4 py-4 whitespace-no-wrap border-b border-gray-200">{shipment.id}</td>
-                            <td className={`px-4 py-4 whitespace-no-wrap border-b border-gray-200 ${shipment.status === "Delivered" ? "bg-green-200" : shipment.status === "In Transit" ? "bg-yellow-200" : shipment.status === "Cancelled" ? "bg-red-500" : "bg-red-200"} transition-opacity duration-500`}>
+                            <td className={`px-4 py-4 whitespace-no-wrap border-b ${shipment.status === "Delivered" ? "bg-green-500" : shipment.status === "In Transit" ? "bg-yellow-200" : shipment.status === "Cancelled" ? "bg-red-500" : "bg-red-200"} transition-opacity duration-500`}>
                                 {shipment.status}
                             </td>
                             <td className="px-4 py-4 whitespace-no-wrap border-b border-gray-200">{shipment.location}</td>

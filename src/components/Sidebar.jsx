@@ -9,7 +9,7 @@ const Sidebar = ({openSidebar, updateSidebarOpen}) => {
         updateSidebarOpen(false)
     }
     return (
-        <div onBlur={handleOnBlur} className={`w-64 h-screen bg-gray-900 text-white px-4 py-8 fixed inset-y-0 left-0 z-30 overflow-hidden overflow-y-auto transition duration-300 transform lg:translate-x-0 lg:static lg:inset-0
+        <div onBlur={handleOnBlur} className={`w-64 h-screen bg-gray-900 text-white px-4 py-8 fixed left-0 z-30 overflow-hidden overflow-y-auto transition duration-300 transform lg:translate-x-0 lg:static lg:inset-0
          ${ openSidebar ? 'translate-x-0 ease-out block' : '-translate-x-full ease-in'}`}>
             <div className="flex items-center space-x-4 mb-6">
                 <h2 className="text-xl font-bold ">Dashboard</h2>
