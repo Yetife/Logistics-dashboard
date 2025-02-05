@@ -1,6 +1,0 @@
-[
-  { "id": 1, "trackingNumber": "ABC123", "status": "Delivered", "date": "2025-02-01" },
-  { "id": 2, "trackingNumber": "XYZ456", "status": "In Transit", "date": "2025-02-02" },
-  { "id": 3, "trackingNumber": "DEF789", "status": "Pending", "date": "2025-02-03" },
-  { "id": 4, "trackingNumber": "GHI012", "status": "Cancelled", "date": "2025-02-04" }
-]

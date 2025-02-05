@@ -1,24 +1,3 @@
-// import React, { createContext, useState, useEffect } from "react";
-// import { fetchShipments } from "../services/api";
-//
-// export const ShipmentsContext = createContext();
-//
-// export const ShipmentsProvider = ({ children }) => {
-//     const [shipments, setShipments] = useState([]);
-//     const [filter, setFilter] = useState("");
-//
-//     useEffect(() => {
-//         fetchShipments().then((data) => setShipments(data));
-//     }, []);
-//
-//     return (
-//         <ShipmentsContext.Provider value={{ shipments, setShipments, filter, setFilter }}>
-//             {children}
-//         </ShipmentsContext.Provider>
-//     );
-// };
-// export const useShipments = () => useContext(ShipmentContext);
-
 import { createContext, useContext, useState, useEffect } from "react";
 import shipmentsData from "../data/shipment.js";
 
@@ -35,10 +14,11 @@ export const ShipmentProvider = ({ children }) => {
                 prev.map((shipment) =>
                     shipment.status === "In Transit"
                         ? { ...shipment, status: "Delivered" }
-                        : shipment
+                        : shipment.status === "Pending"
+                            ? { ...shipment, status: "In Transit" } :shipment
                 )
             );
-        }, 100000);
+        }, 10000);
 
         return () => clearInterval(interval);
     }, []);
@@ -51,3 +31,5 @@ export const ShipmentProvider = ({ children }) => {
 };
 
 export const useShipments = () => useContext(ShipmentContext);
+
+
