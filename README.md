@@ -8,7 +8,7 @@ Optimized Performance with React Memoization
 
 # Clone the repository
 
-git clone https://github.com/Yetife/logistics-dashboard.git
+git clone https://github.com/Yetife/Logistics-dashboard.git
 cd logistics-dashboard
 
 
